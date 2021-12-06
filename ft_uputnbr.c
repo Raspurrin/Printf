@@ -6,12 +6,11 @@
 /*   By: mialbert <mialbert@student.42wolfsburg.de> +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/12/05 02:10:29 by mialbert          #+#    #+#             */
-/*   Updated: 2021/12/05 16:37:53 by mialbert         ###   ########.fr       */
+/*   Updated: 2021/12/06 00:01:55 by mialbert         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include <stdint.h>
-#include <stdlib.h>
+#include "printf.h"
 
 int32_t	ft_uputnbr(uint32_t nbr)
 {
@@ -20,12 +19,12 @@ int32_t	ft_uputnbr(uint32_t nbr)
 	i = 0;
 	if (nbr >= 10)
 	{
-		ft_putnbr(nbr / 10);
-		ft_putnbr(nbr % 10);
+		ft_uputnbr(nbr / 10);
+		ft_uputnbr(nbr % 10);
 	}
 	if (nbr < 10)
 	{
-		write(1, nbr, 1);
+		ft_putchar(nbr);
 		i++;
 	}
 	return (i);

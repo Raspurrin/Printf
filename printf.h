@@ -6,15 +6,17 @@
 /*   By: mialbert <mialbert@student.42wolfsburg.de> +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/12/05 16:24:16 by mialbert          #+#    #+#             */
-/*   Updated: 2021/12/05 17:09:23 by mialbert         ###   ########.fr       */
+/*   Updated: 2021/12/06 00:04:38 by mialbert         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #ifndef PRINTF_H
 # define PRINTF_H
 
+# include <stdlib.h>
 # include <stdint.h>
 # include <stdarg.h>
+# include <unistd.h>
 
 /**
  * Recreating the printf function
@@ -23,7 +25,7 @@
  * @param ... variable length arguments, it can take any number of arguments
  * @return int32_t the amount of characters printed
  */
-int32_t	printf(const char *str, ...);
+int32_t	ft_printf(const char *str, ...);
 
 /**
  * Converting signed integers and writing them on stdout

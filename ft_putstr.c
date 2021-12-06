@@ -1,18 +1,32 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_putstr_fd.c                                     :+:      :+:    :+:   */
+/*   ft_putstr.c                                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: mialbert <mialbert@student.42wolfsburg.de> +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/12/05 02:21:02 by mialbert          #+#    #+#             */
-/*   Updated: 2021/12/05 16:38:16 by mialbert         ###   ########.fr       */
+/*   Updated: 2021/12/05 23:58:53 by mialbert         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include <stdint.h>
+#include "printf.h"
+
+static	size_t	ft_strlen(char *str)
+{
+	size_t	i;
+
+	i = 0;
+	while (str[i])
+		i++;
+	return (i);
+}
 
 int32_t	ft_putstr(char *str)
 {
-	write(1, str, ft_strlen(str));
+	int32_t	len;
+
+	len = ft_strlen(str);
+	write(1, str, len);
+	return (len);
 }

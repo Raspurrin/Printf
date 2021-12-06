@@ -1,18 +1,19 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_putchar_d.c                                     :+:      :+:    :+:   */
+/*   ft_putchar.c                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: mialbert <mialbert@student.42wolfsburg.de> +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/12/05 02:18:51 by mialbert          #+#    #+#             */
-/*   Updated: 2021/12/05 16:42:31 by mialbert         ###   ########.fr       */
+/*   Updated: 2021/12/05 23:54:52 by mialbert         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include <stdint.h>
+#include "printf.h"
 
-int32_t	ft_putchar(char c, int32_t fd)
+int32_t	ft_putchar(char c)
 {
-	write(fd, &c, 1);
+	write(1, &c, 1);
+	return (1);
 }
