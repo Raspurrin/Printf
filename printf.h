@@ -6,7 +6,7 @@
 /*   By: mialbert <mialbert@student.42wolfsburg.de> +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/12/05 16:24:16 by mialbert          #+#    #+#             */
-/*   Updated: 2021/12/06 00:04:38 by mialbert         ###   ########.fr       */
+/*   Updated: 2021/12/06 21:21:17 by mialbert         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -17,6 +17,7 @@
 # include <stdint.h>
 # include <stdarg.h>
 # include <unistd.h>
+# include <stdio.h>
 
 /**
  * Recreating the printf function
@@ -47,7 +48,7 @@ int32_t	ft_uputnbr(uint32_t nbr);
  * @param hexbase the hexidecimal base to be used
  * @return int32_t length of the hexidecmal number
  */
-int32_t	ft_hex(int32_t nbr, const char *hexbase);
+int32_t	ft_hex(uint64_t nbr, const char *hexbase);
 
 /**
  * converts a number to hexidecimal and prints it in uppercase
@@ -55,7 +56,7 @@ int32_t	ft_hex(int32_t nbr, const char *hexbase);
  * @param hexbase the hexidecimal base to be used
  * @return int32_t length of the hexidecmal number
  */
-int32_t	ft_uphex(int32_t nbr, const char *hexbase);
+int32_t	ft_uphex(uint64_t nbr, const char *hexbase);
 
 /**
  * Prints out a string to stdout
@@ -70,5 +71,13 @@ int32_t	ft_putstr(char *str);
  * @return int32_t length of the character
  */
 int32_t	ft_putchar(char c);
+
+/**
+ * Prints out the memory adress held by the pointer
+ * @param ptr The pointer
+ * @param hexbase The hexidecimal base to be used
+ * @return the length of the memory adress
+ */
+int32_t	ft_putmem(void *ptr, const char *hexbase);
 
 #endif
