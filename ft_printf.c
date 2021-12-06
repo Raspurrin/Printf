@@ -6,34 +6,33 @@
 /*   By: mialbert <mialbert@student.42wolfsburg.de> +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/12/05 02:10:17 by mialbert          #+#    #+#             */
-/*   Updated: 2021/12/06 14:12:46 by mialbert         ###   ########.fr       */
+/*   Updated: 2021/12/06 22:26:03 by mialbert         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "printf.h"
 
-static	int32_t	ft_cases(const char chr, va_list argp)
+static	int32_t	ft_cases(const char chr, va_list argp, int32_t count)
 {
-	size_t	count;
 	char	c;
 
 	c = 0;
 	if (chr == 'c')
-		count = ft_putchar(va_arg(argp, int32_t));
+		count += ft_putchar(va_arg(argp, int32_t));
 	if (chr == 's')
-		count = ft_putstr(va_arg(argp, char *));
+		count += ft_putstr(va_arg(argp, char *));
 	if (chr == '%')
-		count = ft_putchar('%');
+		count += ft_putchar('%');
 	if (chr == 'i' || chr == 'd')
-		count = ft_putnbr(va_arg(argp, int32_t), c);
+		count += ft_putnbr(va_arg(argp, int32_t), c);
 	if (chr == 'u')
-		count = ft_uputnbr(va_arg(argp, int32_t));
-	// if (chr == 'p')
-	// 	count = ft_putmem(va_arg(argp, int32_t));
+		count += ft_uputnbr(va_arg(argp, int32_t));
+	if (chr == 'p')
+		count += ft_putmem(va_arg(argp, void *), "0123456789ABCDEF");
 	if (chr == 'x')
-		count = ft_hex(va_arg(argp, int32_t), "0123456789abcdef");
+		count += ft_hex(va_arg(argp, uint64_t), "0123456789abcdef");
 	if (chr == 'X')
-		count = ft_uphex(va_arg(argp, int32_t), "0123456789ABCDEF");
+		count += ft_uphex(va_arg(argp, uint64_t), "0123456789ABCDEF");
 	return (count);
 }
 
@@ -49,12 +48,12 @@ int32_t	ft_printf(const char *str, ...)
 		if (*str == '%')
 		{	
 			str++;
-			count = ft_cases(*str, argp);
+			count = ft_cases(*str, argp, count);
 			str++;
 		}
 		else
 		{
-			count = ft_putchar(*str);
+			count += ft_putchar(*str);
 			str++;
 		}
 	}
@@ -63,8 +62,9 @@ int32_t	ft_printf(const char *str, ...)
 
 int	main(void)
 {
-	char	name[] = "Kuba";
+	char	name[] = "Leon";
 
-	ft_printf("hello %s, what is %d? %% %c", name, 42, 'a');
+	ft_printf("\t%d\n", ft_printf("hello, %s eyooo %d %p", name, 166, name));
+	printf("\t%d\n", printf("hello, %s eyooo %d %p", name, 166, name));
 	return (0);
 }
