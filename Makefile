@@ -6,7 +6,7 @@
 #    By: mialbert <mialbert@student.42wolfsburg.de> +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2021/12/05 22:35:51 by mialbert          #+#    #+#              #
-#    Updated: 2021/12/08 16:03:35 by mialbert         ###   ########.fr        #
+#    Updated: 2021/12/08 17:10:32 by mialbert         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -45,7 +45,7 @@ LPURPLE = $(CLR)1;35m
 LCYAN = $(CLR)1;36m
 WHITE = $(CLR)1;37m
 
-TIME = 0.17
+TIME = 0.07
 
 #default target
 all: $(NAME)
