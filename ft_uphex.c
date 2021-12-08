@@ -6,13 +6,13 @@
 /*   By: mialbert <mialbert@student.42wolfsburg.de> +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/12/05 02:10:29 by mialbert          #+#    #+#             */
-/*   Updated: 2021/12/06 22:25:09 by mialbert         ###   ########.fr       */
+/*   Updated: 2021/12/07 17:24:24 by mialbert         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "printf.h"
 
-int32_t	ft_uphex(uint64_t nbr, const char *hexbase)
+int32_t	ft_uphex(uint32_t nbr, const char *hexbase)
 {
 	int32_t	i;
 
