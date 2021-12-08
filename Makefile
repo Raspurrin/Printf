@@ -6,7 +6,7 @@
 #    By: mialbert <mialbert@student.42wolfsburg.de> +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2021/12/05 22:35:51 by mialbert          #+#    #+#              #
-#    Updated: 2021/12/08 01:31:59 by mialbert         ###   ########.fr        #
+#    Updated: 2021/12/08 16:03:35 by mialbert         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -20,7 +20,8 @@ SRCS = 	ft_printf.c \
 		ft_putnbr.c \
 		ft_putstr.c \
 		ft_uphex.c \
-		ft_uputnbr.c
+		ft_uputnbr.c \
+		ft_hex2.c
 
 OBJS = $(SRCS:.c=.o)
 
@@ -44,7 +45,7 @@ LPURPLE = $(CLR)1;35m
 LCYAN = $(CLR)1;36m
 WHITE = $(CLR)1;37m
 
-
+TIME = 0.17
 
 #default target
 all: $(NAME)
@@ -82,10 +83,6 @@ fclean: clean
 #removes all object files and the archive file if created and remakes everything
 re: fclean all
 
-something:
-	for (( ; ; ))
-		echo "            #&                 &%"
-
 wolf:
 	@clear
 	@echo "${PURPLE}           #&                 &%"     
@@ -101,7 +98,7 @@ wolf:
 	@echo '              %.   .,,,,    %.'          
 	@echo '               %    &%%    %*'           
 	@echo '                %%%%,%.%%&,'
-	@sleep 0.17
+	@sleep $(TIME)
 	@clear
 	@echo "${BLUE}           #&                 &%"     
 	@echo '           #%%               %&(%'        
@@ -116,7 +113,7 @@ wolf:
 	@echo '              %.   .,,,,    %.'          
 	@echo '               %    &%%    %*'           
 	@echo '                %%%%,%.%%&,'
-	@sleep 0.17
+	@sleep $(TIME)
 	@clear
 	@echo "${CYAN}           #&                 &%"     
 	@echo '           #%%               %&(%'        
@@ -131,7 +128,7 @@ wolf:
 	@echo '              %.   .,,,,    %.'          
 	@echo '               %    &%%    %*'           
 	@echo '                %%%%,%.%%&,'
-	@sleep 0.17
+	@sleep $(TIME)
 	@clear
 	@echo "${GREEN}           #&                 &%"     
 	@echo '           #%%               %&(%'        
@@ -146,7 +143,7 @@ wolf:
 	@echo '              %.   .,,,,    %.'          
 	@echo '               %    &%%    %*'           
 	@echo '                %%%%,%.%%&,'
-	@sleep 0.17
+	@sleep $(TIME)
 	@clear
 	@echo "${YELLOW}           #&                 &%"     
 	@echo '           #%%               %&(%'        
@@ -161,7 +158,7 @@ wolf:
 	@echo '              %.   .,,,,    %.'          
 	@echo '               %    &%%    %*'           
 	@echo '                %%%%,%.%%&,'
-	@sleep 0.17
+	@sleep $(TIME)
 	@clear
 	@echo "${RED}           #&                 &%"     
 	@echo '           #%%               %&(%'        
@@ -176,7 +173,7 @@ wolf:
 	@echo '              %.   .,,,,    %.'          
 	@echo '               %    &%%    %*'           
 	@echo '                %%%%,%.%%&,'
-	@sleep 0.17
+	@sleep $(TIME)
 	@clear
 	@echo "${WHITE}           #&                 &%"     
 	@echo '           #%%               %&(%'        
@@ -191,7 +188,7 @@ wolf:
 	@echo '              %.   .,,,,    %.'          
 	@echo '               %    &%%    %*'           
 	@echo '                %%%%,%.%%&,'
-	@sleep 0.17
+	@sleep $(TIME)
 	@make wolf
 
 #to signify that these are not files to be made
