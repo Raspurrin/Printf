@@ -6,12 +6,12 @@
 #    By: mialbert <mialbert@student.42wolfsburg.de> +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2021/12/05 22:35:51 by mialbert          #+#    #+#              #
-#    Updated: 2021/12/06 21:22:57 by mialbert         ###   ########.fr        #
+#    Updated: 2021/12/08 01:31:59 by mialbert         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
-NAME = printf.a
-CC = gcc
+NAME = libftprintf.a
+CC = clang
 CFLAGS = -Wall -Werror -Wextra
 SRCS = 	ft_printf.c \
 		ft_hex.c \
@@ -44,19 +44,7 @@ LPURPLE = $(CLR)1;35m
 LCYAN = $(CLR)1;36m
 WHITE = $(CLR)1;37m
 
-           #&                 &%        
-           #%%%%%         #%&(%%        
-           # *%   %%/ ,%%   %% %*       
-          ##   %&          %#  &#       
-         #$%&.                (%%/      
-       #/                          %    
-      #%       %%         %%       (%   
-      ##%%%,     ..      .      %%%#*   
-         #%(#.                #(#%      
-             #,              %          
-              #.   .,,,,    %.          
-               #    &%%    %*           
-                #%%%,%.%%&,
+
 
 #default target
 all: $(NAME)
@@ -84,7 +72,6 @@ parrot:
 #removes all object files if created
 clean:
 	@rm -f $(OBJS)
-
 	@echo "${RED} removed ${NC} $(OBJS)"
 
 #removes all object files and the archive file if created
@@ -95,5 +82,118 @@ fclean: clean
 #removes all object files and the archive file if created and remakes everything
 re: fclean all
 
+something:
+	for (( ; ; ))
+		echo "            #&                 &%"
+
+wolf:
+	@clear
+	@echo "${PURPLE}           #&                 &%"     
+	@echo '           #%%               %&(%'        
+	@echo '           # *%   %%/ ,%%   %% %*'       
+	@echo '          ##   %&          %#  &#'       
+	@echo '         #$%&.                   (%/'      
+	@echo '       #/                          %'    
+	@echo '      #%       %%         %%       (%'   
+	@echo '      "#%%%,     ..      .      %%%#*'   
+	@echo '         "%(#.                #(#%'      
+	@echo '             #,              %'          
+	@echo '              %.   .,,,,    %.'          
+	@echo '               %    &%%    %*'           
+	@echo '                %%%%,%.%%&,'
+	@sleep 0.17
+	@clear
+	@echo "${BLUE}           #&                 &%"     
+	@echo '           #%%               %&(%'        
+	@echo '           # *%   %%/ ,%%   %% %*'       
+	@echo '          ##   %&          %#  &#'       
+	@echo '         #$%&.                   (%/'      
+	@echo '       #/                          %'    
+	@echo '      #%       %%         %%       (%'   
+	@echo '      "#%%%,     ..      .      %%%#*'   
+	@echo '         "%(#.                #(#%'      
+	@echo '             #,              %'          
+	@echo '              %.   .,,,,    %.'          
+	@echo '               %    &%%    %*'           
+	@echo '                %%%%,%.%%&,'
+	@sleep 0.17
+	@clear
+	@echo "${CYAN}           #&                 &%"     
+	@echo '           #%%               %&(%'        
+	@echo '           # *%   %%/ ,%%   %% %*'       
+	@echo '          ##   %&          %#  &#'       
+	@echo '         #$%&.                   (%/'      
+	@echo '       #/                          %'    
+	@echo '      #%       %%         %%       (%'   
+	@echo '      "#%%%,     ..      .      %%%#*'   
+	@echo '         "%(#.                #(#%'      
+	@echo '             #,              %'          
+	@echo '              %.   .,,,,    %.'          
+	@echo '               %    &%%    %*'           
+	@echo '                %%%%,%.%%&,'
+	@sleep 0.17
+	@clear
+	@echo "${GREEN}           #&                 &%"     
+	@echo '           #%%               %&(%'        
+	@echo '           # *%   %%/ ,%%   %% %*'       
+	@echo '          ##   %&          %#  &#'       
+	@echo '         #$%&.                   (%/'      
+	@echo '       #/                          %'    
+	@echo '      #%       %%         %%       (%'   
+	@echo '      "#%%%,     ..      .      %%%#*'   
+	@echo '         "%(#.                #(#%'      
+	@echo '             #,              %'          
+	@echo '              %.   .,,,,    %.'          
+	@echo '               %    &%%    %*'           
+	@echo '                %%%%,%.%%&,'
+	@sleep 0.17
+	@clear
+	@echo "${YELLOW}           #&                 &%"     
+	@echo '           #%%               %&(%'        
+	@echo '           # *%   %%/ ,%%   %% %*'       
+	@echo '          ##   %&          %#  &#'       
+	@echo '         #$%&.                   (%/'      
+	@echo '       #/                          %'    
+	@echo '      #%       %%         %%       (%'   
+	@echo '      "#%%%,     ..      .      %%%#*'   
+	@echo '         "%(#.                #(#%'      
+	@echo '             #,              %'          
+	@echo '              %.   .,,,,    %.'          
+	@echo '               %    &%%    %*'           
+	@echo '                %%%%,%.%%&,'
+	@sleep 0.17
+	@clear
+	@echo "${RED}           #&                 &%"     
+	@echo '           #%%               %&(%'        
+	@echo '           # *%   %%/ ,%%   %% %*'       
+	@echo '          ##   %&          %#  &#'       
+	@echo '         #$%&.                   (%/'      
+	@echo '       #/                          %'    
+	@echo '      #%       %%         %%       (%'   
+	@echo '      "#%%%,     ..      .      %%%#*'   
+	@echo '         "%(#.                #(#%'      
+	@echo '             #,              %'          
+	@echo '              %.   .,,,,    %.'          
+	@echo '               %    &%%    %*'           
+	@echo '                %%%%,%.%%&,'
+	@sleep 0.17
+	@clear
+	@echo "${WHITE}           #&                 &%"     
+	@echo '           #%%               %&(%'        
+	@echo '           # *%   %%/ ,%%   %% %*'       
+	@echo '          ##   %&          %#  &#'       
+	@echo '         #$%&.                   (%/'      
+	@echo '       #/                          %'    
+	@echo '      #%       %%         %%       (%'   
+	@echo '      "#%%%,     ..      .      %%%#*'   
+	@echo '         "%(#.                #(#%'      
+	@echo '             #,              %'          
+	@echo '              %.   .,,,,    %.'          
+	@echo '               %    &%%    %*'           
+	@echo '                %%%%,%.%%&,'
+	@sleep 0.17
+	@make wolf
+
 #to signify that these are not files to be made
-.PHONY: all clean fclean re test parrot
+
+.PHONY: all clean fclean re test parrot wolf clear
