@@ -6,7 +6,7 @@
 /*   By: mialbert <mialbert@student.42wolfsburg.de> +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/12/05 02:10:17 by mialbert          #+#    #+#             */
-/*   Updated: 2021/12/06 22:26:03 by mialbert         ###   ########.fr       */
+/*   Updated: 2021/12/08 16:18:00 by mialbert         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,9 +14,8 @@
 
 static	int32_t	ft_cases(const char chr, va_list argp, int32_t count)
 {
-	char	c;
-
-	c = 0;
+	if (!argp)
+		return (0);
 	if (chr == 'c')
 		count += ft_putchar(va_arg(argp, int32_t));
 	if (chr == 's')
@@ -24,15 +23,15 @@ static	int32_t	ft_cases(const char chr, va_list argp, int32_t count)
 	if (chr == '%')
 		count += ft_putchar('%');
 	if (chr == 'i' || chr == 'd')
-		count += ft_putnbr(va_arg(argp, int32_t), c);
+		count += ft_putnbr(va_arg(argp, int32_t), 0);
 	if (chr == 'u')
-		count += ft_uputnbr(va_arg(argp, int32_t));
+		count += ft_uputnbr(va_arg(argp, uint32_t));
 	if (chr == 'p')
-		count += ft_putmem(va_arg(argp, void *), "0123456789ABCDEF");
+		count += ft_putmem(va_arg(argp, size_t *), "0123456789abcdef");
 	if (chr == 'x')
-		count += ft_hex(va_arg(argp, uint64_t), "0123456789abcdef");
+		count += ft_hex(va_arg(argp, uint32_t), "0123456789abcdef");
 	if (chr == 'X')
-		count += ft_uphex(va_arg(argp, uint64_t), "0123456789ABCDEF");
+		count += ft_uphex(va_arg(argp, uint32_t), "0123456789ABCDEF");
 	return (count);
 }
 
@@ -60,11 +59,13 @@ int32_t	ft_printf(const char *str, ...)
 	return (count);
 }
 
-int	main(void)
-{
-	char	name[] = "Leon";
+// int	main(void)
+// {
+// 	// char	name[] = "Anahit";
 
-	ft_printf("\t%d\n", ft_printf("hello, %s eyooo %d %p", name, 166, name));
-	printf("\t%d\n", printf("hello, %s eyooo %d %p", name, 166, name));
-	return (0);
-}
+// 	// ft_printf("\t%d\n", ft_printf("hello, %s eyooo %d %p", name, 166, name));
+// 	// printf("\t%d\n", printf("hello, %s eyooo %d %p", name, 166, name));
+// 	ft_printf("\t%d\n", ft_printf("%p", LONG_MAX));
+// 	// printf("\t%d\n", printf("%p", LONG_MAX));
+// 	return (0);
+// }
