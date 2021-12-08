@@ -6,7 +6,7 @@
 /*   By: mialbert <mialbert@student.42wolfsburg.de> +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/12/05 16:24:16 by mialbert          #+#    #+#             */
-/*   Updated: 2021/12/06 21:21:17 by mialbert         ###   ########.fr       */
+/*   Updated: 2021/12/08 16:18:55 by mialbert         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -18,6 +18,7 @@
 # include <stdarg.h>
 # include <unistd.h>
 # include <stdio.h>
+# include <limits.h>
 
 /**
  * Recreating the printf function
@@ -48,7 +49,15 @@ int32_t	ft_uputnbr(uint32_t nbr);
  * @param hexbase the hexidecimal base to be used
  * @return int32_t length of the hexidecmal number
  */
-int32_t	ft_hex(uint64_t nbr, const char *hexbase);
+int32_t	ft_hex(uint32_t nbr, const char *hexbase);
+
+/**
+ * This exists purely for putmem
+ * @param nbr 
+ * @param hexbase 
+ * @return int32_t 
+ */
+int32_t	ft_hex2(size_t nbr, const char *hexbase);
 
 /**
  * converts a number to hexidecimal and prints it in uppercase
@@ -56,7 +65,7 @@ int32_t	ft_hex(uint64_t nbr, const char *hexbase);
  * @param hexbase the hexidecimal base to be used
  * @return int32_t length of the hexidecmal number
  */
-int32_t	ft_uphex(uint64_t nbr, const char *hexbase);
+int32_t	ft_uphex(uint32_t nbr, const char *hexbase);
 
 /**
  * Prints out a string to stdout
@@ -78,6 +87,6 @@ int32_t	ft_putchar(char c);
  * @param hexbase The hexidecimal base to be used
  * @return the length of the memory adress
  */
-int32_t	ft_putmem(void *ptr, const char *hexbase);
+int32_t	ft_putmem(unsigned long int *ptr, const char *hexbase);
 
 #endif
