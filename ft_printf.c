@@ -6,7 +6,7 @@
 /*   By: mialbert <mialbert@student.42wolfsburg.de> +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/12/05 02:10:17 by mialbert          #+#    #+#             */
-/*   Updated: 2021/12/08 16:18:00 by mialbert         ###   ########.fr       */
+/*   Updated: 2021/12/15 13:27:50 by mialbert         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -48,13 +48,10 @@ int32_t	ft_printf(const char *str, ...)
 		{	
 			str++;
 			count = ft_cases(*str, argp, count);
-			str++;
 		}
 		else
-		{
 			count += ft_putchar(*str);
-			str++;
-		}
+		str++;
 	}
 	return (count);
 }
@@ -63,9 +60,9 @@ int32_t	ft_printf(const char *str, ...)
 // {
 // 	// char	name[] = "Anahit";
 
-// 	// ft_printf("\t%d\n", ft_printf("hello, %s eyooo %d %p", name, 166, name));
-// 	// printf("\t%d\n", printf("hello, %s eyooo %d %p", name, 166, name));
-// 	ft_printf("\t%d\n", ft_printf("%p", LONG_MAX));
+// 	ft_printf("\t%d\n", ft_printf("hello, %s eyooo %d %p", name, 166, name));
+// 	printf("\t%d\n", printf("hello, %s eyooo %d %p", name, 166, name));
+// 	ft_printf("\t%d\n", ft_printf("%p", 23232));
 // 	// printf("\t%d\n", printf("%p", LONG_MAX));
 // 	return (0);
 // }
