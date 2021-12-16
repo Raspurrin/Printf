@@ -6,11 +6,11 @@
 /*   By: mialbert <mialbert@student.42wolfsburg.de> +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/12/05 02:10:17 by mialbert          #+#    #+#             */
-/*   Updated: 2021/12/15 13:27:50 by mialbert         ###   ########.fr       */
+/*   Updated: 2021/12/16 19:55:38 by mialbert         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "printf.h"
+#include "ft_printf.h"
 
 static	int32_t	ft_cases(const char chr, va_list argp, int32_t count)
 {
@@ -55,14 +55,3 @@ int32_t	ft_printf(const char *str, ...)
 	}
 	return (count);
 }
-
-// int	main(void)
-// {
-// 	// char	name[] = "Anahit";
-
-// 	ft_printf("\t%d\n", ft_printf("hello, %s eyooo %d %p", name, 166, name));
-// 	printf("\t%d\n", printf("hello, %s eyooo %d %p", name, 166, name));
-// 	ft_printf("\t%d\n", ft_printf("%p", 23232));
-// 	// printf("\t%d\n", printf("%p", LONG_MAX));
-// 	return (0);
-// }
