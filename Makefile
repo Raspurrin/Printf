@@ -6,7 +6,7 @@
 #    By: mialbert <mialbert@student.42wolfsburg.de> +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2021/12/05 22:35:51 by mialbert          #+#    #+#              #
-#    Updated: 2021/12/08 17:10:32 by mialbert         ###   ########.fr        #
+#    Updated: 2021/12/17 12:02:58 by mialbert         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -35,52 +35,34 @@ ORANGE = $(CLR)0;33m
 BLUE = $(CLR)0;34m
 PURPLE = $(CLR)0;35m
 CYAN = $(CLR)0;36m
-LGRAY = $(CLR)0;37m
-DGRAY = $(CLR)1;30m
-LRED = $(CLR)1;31m
-LGREEN = $(CLR)1;32m
 YELLOW = $(CLR)1;33m
-LBLUE = $(CLR)1;34m
-LPURPLE = $(CLR)1;35m
-LCYAN = $(CLR)1;36m
 WHITE = $(CLR)1;37m
 
 TIME = 0.07
 
-#default target
 all: $(NAME)
 
-#replacing .c with .o and compiling all object files without linking them
 %.o: %.c 
-	@echo "${GREEN}========== compiling... =========="
+	@echo "${GREEN}========== Compiling... =========="
 	$(CC) $(CFLAGS) -c $(SRCS)
 
-#creating the library
 $(NAME): $(OBJS)
-	@echo "${BLUE}======== creating library ========"
+	@echo "${BLUE}======== Creating library ========"
 	ar rcs $@ $^
-
-#for private testing purposes
+	
 test:
-	@echo "${CYAN}========== test output ===========${CYAN}"
+	@echo "${CYAN}========== Test output ===========${CYAN}"
 	@$(CC) $(CFLAGS) $(SRCS) && ./a.out
 	@echo ""
 
-#for extra motivation
-parrot:
-	@curl parrot.live
-
-#removes all object files if created
 clean:
 	@rm -f $(OBJS)
-	@echo "${RED} removed ${NC} $(OBJS)"
+	@echo "${RED} Removed ${NC} $(OBJS)"
 
-#removes all object files and the archive file if created
 fclean: clean
 	@rm -f $(NAME)
-	@echo "${RED} removed ${NC} $(NAME)"
+	@echo "${RED} Removed ${NC} $(NAME)"
 
-#removes all object files and the archive file if created and remakes everything
 re: fclean all
 
 wolf:
@@ -191,6 +173,4 @@ wolf:
 	@sleep $(TIME)
 	@make wolf
 
-#to signify that these are not files to be made
-
-.PHONY: all clean fclean re test parrot wolf clear
+.PHONY: all clean fclean re test wolf clear
