@@ -1,17 +1,17 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   printf.h                                           :+:      :+:    :+:   */
+/*   ft_printf.h                                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: mialbert <mialbert@student.42wolfsburg.de> +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/12/05 16:24:16 by mialbert          #+#    #+#             */
-/*   Updated: 2021/12/08 16:18:55 by mialbert         ###   ########.fr       */
+/*   Updated: 2021/12/18 22:55:41 by mialbert         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#ifndef PRINTF_H
-# define PRINTF_H
+#ifndef FT_PRINTF_H
+# define FT_PRINTF_H
 
 # include <stdlib.h>
 # include <stdint.h>
@@ -49,15 +49,7 @@ int32_t	ft_uputnbr(uint32_t nbr);
  * @param hexbase the hexidecimal base to be used
  * @return int32_t length of the hexidecmal number
  */
-int32_t	ft_hex(uint32_t nbr, const char *hexbase);
-
-/**
- * This exists purely for putmem
- * @param nbr 
- * @param hexbase 
- * @return int32_t 
- */
-int32_t	ft_hex2(size_t nbr, const char *hexbase);
+int32_t	ft_hex(uint64_t nbr, const char *hexbase);
 
 /**
  * converts a number to hexidecimal and prints it in uppercase
