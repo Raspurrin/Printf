@@ -6,7 +6,7 @@
 #    By: mialbert <mialbert@student.42wolfsburg.de> +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2021/12/05 22:35:51 by mialbert          #+#    #+#              #
-#    Updated: 2021/12/17 18:13:08 by mialbert         ###   ########.fr        #
+#    Updated: 2021/12/18 22:50:04 by mialbert         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -21,7 +21,6 @@ SRCS = 	ft_printf.c \
 		ft_putstr.c \
 		ft_uphex.c \
 		ft_uputnbr.c \
-		ft_hex2.c
 
 OBJS = $(SRCS:.c=.o)
 
