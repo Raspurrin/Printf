@@ -6,7 +6,7 @@
 /*   By: mialbert <mialbert@student.42wolfsburg.de> +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/12/05 16:24:16 by mialbert          #+#    #+#             */
-/*   Updated: 2021/12/18 22:55:41 by mialbert         ###   ########.fr       */
+/*   Updated: 2022/01/02 02:29:43 by mialbert         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -19,6 +19,12 @@
 # include <unistd.h>
 # include <stdio.h>
 # include <limits.h>
+
+#if defined(__linux__)
+    #define NULL_OUTPUT "(nil)"
+#elif defined(__APPLE__)
+    #define NULL_OUTPUT "0x0" 
+#endif
 
 /**
  * Recreating the printf function
