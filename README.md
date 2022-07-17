@@ -18,7 +18,7 @@ In this project we are handling the following cases:
 Slightly trickier: 
 + **%x**      - Integer converted to hexidecimal, lowercase format.
 + **%X**      - Same but in uppercase format.
-+ **%p**      - The void * pointer argument converted to hexadecimal.
++ **%p**      - A void * pointer argument converted to hexadecimal.
 
 An example of the usage of printf:
 ```c
