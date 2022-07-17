@@ -21,7 +21,7 @@ In this project we are handling the following cases:
 + **%u**      - Unsigned integer. 
 + **%%**      - Prints a percent sign.
 -----------------------------------------
-Cases using hexidecimal conversion: 
+Cases using hexadecimal conversion: 
 + **%x**      - Integer converted to hexidecimal, lowercase format.
 + **%X**      - Same but in uppercase format.
 + **%p**      - A void * pointer argument converted to hexadecimal.
