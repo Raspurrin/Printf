@@ -9,13 +9,13 @@ int	ft_printf(const char *str, ...)
 It will return the amount of characters it prints out. The first argument will contain all characters that need to be printed, along with variables if desired. This will be done with a % followed by a letter signifying the data type of the variable. 
 In this project we are handling the following cases: 
 
-+ **%c**      - Prints a single character.
-+ **%s**      - Prints a string (as defined by the common C convention).
++ **%c**      - A single character. (putchar)
++ **%s**      - A string. (putstr)
++ **%d/i** - An integer, both cases mean the same thing. (putnbr)
 + **%p**      - The void * pointer argument has to be printed in hexadecimal format.
-+ **%d/i** - Prints a decimal (base 10) number.
-+ **%u**      - Prints an unsigned decimal (base 10) number.
-+ **%x**      - Prints a number in hexadecimal (base 16) lowercase format.
-+ **%X**      - Prints a number in hexadecimal (base 16) uppercase format.
++ **%u**      - Unsigned integer. 
++ **%x**      - Number in hexidecimal, lowercase format.
++ **%X**      - Same but in uppercase format.
 + **%%**      - Prints a percent sign.
 
 An example of the usage of printf:
