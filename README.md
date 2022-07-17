@@ -15,7 +15,7 @@ In this project we are handling the following cases:
 + **%u**      - Unsigned integer. 
 + **%%**      - Prints a percent sign.
 -----------------------------------------
-Slightly trickier: 
+Cases using hexidecimal conversion: 
 + **%x**      - Integer converted to hexidecimal, lowercase format.
 + **%X**      - Same but in uppercase format.
 + **%p**      - A void * pointer argument converted to hexadecimal.
@@ -53,9 +53,14 @@ Now the most important function, va_arg()! Using it is like pulling the next arg
 ## Steps for writing your own ft_printf
 + Initialise va_list by using va_start and already include va_end at the end of your main function
 + Itterate through the given string, write characters if you don't encounter a % and keep count of the amount of characters written
-+ If you encounter a %, check which value is given afterwards, use va_arg with the type specified and convert that type to a string and output it to STDOUT. 
++ If you encounter a %, check which value is given afterwards, use va_arg with the type specified and convert that type to a string and output it to STDOUT.
++ Make sure to return the amount of characters written at the end!
 
 ## Type conversion
 If you are given an integer for instance, this is not the correct type to create readable output. In this case the functionality of putnbr() from the standard library has to be written, to convert the integer to an array of chars. 
 
 ### Hexidecimals 
+A hexidecimal is a number with a base of 16 instead of the regular 10. This is how it is represented: 0123456789ABCDEF with F being 15.
+Essentially you can use almost the exact same logic you would use to convert and print a regular base 10 integer (like with putnbr) except you change the base of the number in your calculation and map the result to the representation of a hexidecimal number.
+
+<img src="https://user-images.githubusercontent.com/13866954/179416564-44ac2c37-600c-478c-a245-be5e811cfabb.png" height="300"/> <img src="https://user-images.githubusercontent.com/13866954/179412288-8f03a743-bed9-45c5-9188-e72e1c3939d3.png" height="300"/> 
