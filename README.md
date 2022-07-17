@@ -61,6 +61,7 @@ Now the most important function, va_arg()! Using it is like pulling the next arg
 + Itterate through the given string, write characters if you don't encounter a % and keep count of the amount of characters written
 + If you encounter a %, check which value is given afterwards, use va_arg with the type specified and convert that type to a string and output it to STDOUT.
 + Make sure to return the amount of characters written at the end!
++ Compare your printf against the behaviour of the original one, to make sure it is correct
 
 ## Type conversion
 If you are given an integer for instance, this is not the correct type to create readable output. In this case the functionality of putnbr() from the standard library has to be written, to convert the integer to an array of chars. 
