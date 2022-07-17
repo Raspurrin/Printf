@@ -61,6 +61,7 @@ Now the most important function, va_arg()! Using it is like pulling the next arg
 + Itterate through the given string, write characters if you don't encounter a % and keep count of the amount of characters written
 + If you encounter a %, check which value is given afterwards, use va_arg with the type specified and convert that type to a string and output it to STDOUT.
 + Make sure to return the amount of characters written at the end!
++ If there is no valid pointer given to the %p case, you should print out "0x0" on Mac (it would be "(nil)" on Linux)
 + Compare your printf against the behaviour of the original one, to make sure it is correct
 
 ## Type conversion
