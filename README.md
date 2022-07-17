@@ -14,7 +14,6 @@ In this project we are handling the following cases:
 + **%d/i** - An integer, both cases mean the same thing. (putnbr)
 + **%u**      - Unsigned integer. 
 + **%p**      - The void * pointer argument has to be printed in hexadecimal format.
-
 + **%x**      - Number in hexidecimal, lowercase format.
 + **%X**      - Same but in uppercase format.
 + **%%**      - Prints a percent sign.
