@@ -1,6 +1,12 @@
 # ft_printf
 In this project we recreate the printf function and learn about variadic functions. 
 
+### Index:
++ [The behaviour of printf](#the-behaviour-of-printf)
++ [Variadic arguments](#variadic-arguments) 
++ [Steps for writing your own ft_printf](#steps-for-writing-your-own-ft_printf) 
++ [Type conversion](#type-conversion)
+
 ## The behaviour of printf
 The prototype of printf is as follows: 
 ```
