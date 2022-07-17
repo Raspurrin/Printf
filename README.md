@@ -63,4 +63,4 @@ If you are given an integer for instance, this is not the correct type to create
 A hexidecimal is a number with a base of 16 instead of the regular 10. This is how it is represented: 0123456789ABCDEF with F being 15.
 Essentially you can use almost the exact same logic you would use to convert and print a regular base 10 integer (like with putnbr) except you change the base of the number in your calculation and map the result to the representation of a hexidecimal number.
 
-<img src="https://user-images.githubusercontent.com/13866954/179416564-44ac2c37-600c-478c-a245-be5e811cfabb.png" height="300"/> <img src="https://user-images.githubusercontent.com/13866954/179412288-8f03a743-bed9-45c5-9188-e72e1c3939d3.png" height="300"/> 
+<img src="https://user-images.githubusercontent.com/13866954/179416564-44ac2c37-600c-478c-a245-be5e811cfabb.png" height="250"/> <img src="https://user-images.githubusercontent.com/13866954/179412288-8f03a743-bed9-45c5-9188-e72e1c3939d3.png" height="250"/> 
