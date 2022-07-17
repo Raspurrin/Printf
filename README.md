@@ -13,10 +13,12 @@ In this project we are handling the following cases:
 + **%s**      - A string. (putstr)
 + **%d/i** - An integer, both cases mean the same thing. (putnbr)
 + **%u**      - Unsigned integer. 
-+ **%p**      - The void * pointer argument has to be printed in hexadecimal format.
-+ **%x**      - Number in hexidecimal, lowercase format.
-+ **%X**      - Same but in uppercase format.
 + **%%**      - Prints a percent sign.
+-----------------------------------------
+Slightly trickier: 
++ **%x**      - Integer converted to hexidecimal, lowercase format.
++ **%X**      - Same but in uppercase format.
++ **%p**      - The void * pointer argument converted to hexadecimal.
 
 An example of the usage of printf:
 ```c
