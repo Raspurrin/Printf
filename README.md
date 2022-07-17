@@ -12,8 +12,9 @@ In this project we are handling the following cases:
 + **%c**      - A single character. (putchar)
 + **%s**      - A string. (putstr)
 + **%d/i** - An integer, both cases mean the same thing. (putnbr)
-+ **%p**      - The void * pointer argument has to be printed in hexadecimal format.
 + **%u**      - Unsigned integer. 
++ **%p**      - The void * pointer argument has to be printed in hexadecimal format.
+
 + **%x**      - Number in hexidecimal, lowercase format.
 + **%X**      - Same but in uppercase format.
 + **%%**      - Prints a percent sign.
